@@ -1,15 +1,15 @@
-import {useState} from 'react'
+import {useState, type MouseEventHandler} from 'react'
 import './App.css'
 
 function App() {
   function test1(){
     return 1000;
   }
-  function test2():number{
+  function test2():MouseEventHandler{
     b('바지');
     d(['아이템1','아이템2','아이템3']);
-          return 100;
-        }
+    return () => {console.log('데이터 변경 완료')}
+  }
   let [a,b] = useState('코트'); //[state 데이터, state 데이터 변경 함수]
   let [c,d] = useState(['변수1','변수2','변수3']);
   let [counter, setCounter] = useState(0);
@@ -18,9 +18,10 @@ function App() {
     <div className="App">
       <div className="test">Hello</div>
       <div onClick={() => alert('안녕')}>Hello</div>
+      <div onClick={() => test2()}>데이터 변경</div>
       test-project
       {
-        test2()
+        //test2()
       }
       {test1()}
       { a }
