@@ -1,5 +1,6 @@
 {
   "name": "test-project",
+  "homepage": "https://gunug.github.io/test-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
