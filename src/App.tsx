@@ -24,6 +24,7 @@ function App() {
       <span onClick={() => {setCounter(counter + 1)}}>버튼</span> {counter}
       <Hello></Hello>
       <Hello></Hello>
+      <input type="text" onChange={(event)=>console.log(event.target.value)}></input>
     </div>
   )
 }
